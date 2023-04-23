@@ -1,0 +1,53 @@
+// // declaring a class
+class Product{
+    constructor(itemname,price,discount,itemcode){
+        this.itemname = itemname;
+        this.price = price;
+        this.discount = discount;
+        this.itemcode = itemcode;
+    }
+}
+let pencil = new Product("pencil",5,10,"p12");
+pencil 
+const Product1 = class {
+    constructor(itemName,price,discount,productCode){
+        this.itemName = itemName;
+        this.price = price;
+        this.discount = discount;
+        this.productCode = productCode;
+    }
+    get getDiscountValue(){
+        return this.discount;
+    }
+    set setDiscountValue(value){
+        this.discount = value;
+    }
+    discountValue(){
+        return this.discount*this.price/100 
+    }
+}
+let chair = new Product1('Chair', 499, 15, 'C10')
+chair
+class Product2 {
+    constructor(itemName){
+        this.itemName = itemName;
+    }
+    getitemname(){
+        return "this is" +this.itemName;
+    }
+}
+// now we will use extension of class method
+class furniture extends Product2{
+    constructor(itemName){
+        super(itemName)
+    }
+    getitemname(){
+        return this.itemName + "is a furniture";
+    }
+}
+let pencil1 = new Product2("pencil",5,10,"p12")
+// WHEN WE TYPE pencil.getitemName then ,output = this is pencil
+let chair1 = new furniture('Chair', 499, 15, 'C10')
+// WHEN WE TYPE chair.getitemName thenoutput = chair is a furniture
+// SUPER FUNCTION - IT IS A FUNUCTION IT CALLS THE PARENT CLASS constructor
+
