@@ -1,13 +1,46 @@
-let namasteBtn = document.querySelector('button');
-namasteBtn.addEventListener('click', inputMsg);
-
-function inputMsg() {
-    let name = prompt('enter the name of student');
-    namasteBtn.textContent ='enter rollno' + name;
-}
-// The console.log() method outputs a message to the web console. 
-// difference between let and  var
-// The variables that are defined with var statement have function scope.
-// We can declare a variable again even if it has been defined previously in the same scope.
-// The variables that are defined with let statement have block scope.
-// We cannot declare a variable more than once if we defined that previously in the same scope.
+document.addEventListener('DOMContentLoaded', () => {
+    const fileInput = document.getElementById('fileInput');
+    const chartContainer = document.getElementById('chartContainer');
+  
+    fileInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+  
+      reader.onload = (e) => {
+        const csvData = e.target.result;
+        const data = parseCSV(csvData);
+  
+        // Process and visualize the data using Plotly.js
+        const deviceNames = data[0].slice(1);
+        const parameters = data.slice(1).map((row) => row[0]);
+        const values = data.slice(1).map((row) => row.slice(1).map(Number));
+  
+        const traces = deviceNames.map((deviceName, index) => ({
+          x: parameters,
+          y: values.map((row) => row[index]),
+          type: 'bar',
+          name: deviceName
+        }));
+  
+        const layout = {
+          title: 'Data Visuals',
+          xaxis: {
+            title: 'Parameters'
+          },
+          yaxis: {
+            title: 'Values'
+          }
+        };
+  
+        Plotly.newPlot(chartContainer, traces, layout);
+      };
+  
+      reader.readAsText(file);
+    });
+  
+    function parseCSV(csvData) {
+      const rows = csvData.split('\n');
+      return rows.map((row) => row.split(','));
+    }
+  });
+  
