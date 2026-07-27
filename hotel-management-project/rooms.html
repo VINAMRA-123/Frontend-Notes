@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rooms | Royal Hotel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav id="navbar">
+
+    <div class="logo">
+
+        <h2>🏨 Royal Hotel</h2>
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html" class="active">Home</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="rooms.html">Rooms</a></li>
+
+        <li><a href="gallery.html">Gallery</a></li>
+
+        <li><a href="booking.html">Booking</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+    <a href="booking.html" class="book-btn">
+
+        Book Now
+
+    </a>
+
+    <div class="menu-btn">
+
+        ☰
+
+    </div>
+
+</nav>
+
+</header>
+
+<section class="page-banner">
+
+<h1>Luxury Rooms</h1>
+
+<p>Find your perfect stay</p>
+
+</section>
+
+<section class="room-search">
+
+<input
+type="text"
+id="searchRoom"
+placeholder="Search Room..."
+>
+
+<select id="category">
+
+<option value="all">All</option>
+
+<option value="Standard">Standard</option>
+
+<option value="Deluxe">Deluxe</option>
+
+<option value="Suite">Suite</option>
+
+</select>
+
+</section>
+
+<section class="room-grid" id="roomGrid">
+
+</section>
+
+<div id="roomModal" class="modal">
+
+<div class="modal-content">
+
+<span id="closeModal">&times;</span>
+
+<img id="modalImage">
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalPrice"></p>
+
+<p id="modalDescription"></p>
+
+<button id="favoriteBtn">
+
+❤ Add to Favorites
+
+</button>
+
+<button onclick="location.href='booking.html'">
+
+Book Now
+
+</button>
+
+</div>
+
+</div>
+
+<script src="js/rooms.js"></script>
+
+</body>
+
+</html>

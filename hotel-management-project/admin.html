@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav id="navbar">
+
+    <div class="logo">
+
+        <h2>🏨 Royal Hotel</h2>
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="rooms.html">Rooms</a></li>
+
+        <li><a href="gallery.html">Gallery</a></li>
+
+        <li><a href="booking.html">Booking</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+        <li><a class="active" href="admin.html">Admin</a></li>
+
+    </ul>
+
+    <a href="booking.html" class="book-btn">
+
+        Book Now
+
+    </a>
+
+    <div class="menu-btn">
+
+        ☰
+
+    </div>
+
+</nav>
+
+</header>
+
+<section class="page-banner">
+
+<h1>Admin Dashboard</h1>
+
+<p>Manage Bookings and Enquiries</p>
+
+</section>
+
+<section class="dashboard">
+
+<div class="dashboard-card">
+
+<h2 id="bookingCount">0</h2>
+
+<p>Total Bookings</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2 id="enquiryCount">0</h2>
+
+<p>Total Enquiries</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h2>120</h2>
+
+<p>Rooms Available</p>
+
+</div>
+
+</section>
+
+<section class="admin-container">
+
+<h2>Booking Records</h2>
+
+<input
+type="text"
+id="search"
+placeholder="Search by Guest Name">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Room</th>
+
+<th>Check In</th>
+
+<th>Check Out</th>
+
+<th>Total</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="bookingTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Royal Hotel | All Rights Reserved
+
+</p>
+
+</footer>
+
+<script src="js/admin.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

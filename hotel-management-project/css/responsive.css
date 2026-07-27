@@ -1,0 +1,178 @@
+@media(max-width:992px){
+
+.room-card{
+
+    width:48%;
+
+}
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.room-card{
+
+    width:100%;
+
+}
+
+.hero-content h1{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+}
+@media(max-width:768px){
+
+.service-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.why-us{
+
+    flex-direction:column;
+
+}
+
+.why-left,
+
+.why-right{
+
+    width:100%;
+
+}
+
+.why-right{
+
+    padding-left:0;
+
+    margin-top:30px;
+
+}
+
+.testimonial-container{
+
+    flex-direction:column;
+
+}
+
+.footer-container{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+@media(max-width:768px){
+
+.about-section{
+
+    flex-direction:column;
+
+}
+
+.about-image,
+
+.about-content{
+
+    width:100%;
+
+}
+
+.about-content{
+
+    padding-left:0;
+
+    margin-top:30px;
+
+}
+
+.statistics{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.team-container{
+
+    flex-direction:column;
+
+}
+
+}
+@media(max-width:768px){
+
+.gallery-grid{
+
+padding:20px;
+
+}
+
+.gallery-item img{
+
+height:200px;
+
+}
+
+#lightbox img{
+
+width:95%;
+
+}
+
+}
+@media(max-width:768px){
+
+.contact{
+
+flex-direction:column;
+
+}
+
+.contact-info,
+
+.contact-form{
+
+width:100%;
+
+}
+
+}
+@media(max-width:768px){
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+table{
+
+display:block;
+
+overflow-x:auto;
+
+}
+
+.admin-container input{
+
+width:100%;
+
+}
+
+}
